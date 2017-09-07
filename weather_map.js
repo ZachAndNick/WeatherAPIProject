@@ -19,7 +19,8 @@
             };
 
             console.log(forecast);
-            return forecast
+
+            console.log($("li")[index])
         });
         console.log(forecast)
 
