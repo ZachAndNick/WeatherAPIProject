@@ -2,22 +2,30 @@
     $.get("http://api.openweathermap.org/data/2.5/forecast/", {
         APPID: "e9545dca3bd8784069868855b7f24779",
         id:     "4726206",
-        units: "imperial"
-        // cnt: "3"
+        units: "imperial",
+        cnt: "3"
     }).done(function(data){
         console.log(data);
+        var forecast = data.list.forEach(function(element, index){
+            var forecast = {
 
-        var forecast = {
-            highTemp: data.list[0].main.temp_max,
-            lowTemp: data.list[0].main.temp_min,
-            cloudIcon: data.list[0].weather[0].icon,
-            cloudDescription: data.list[0].weather[0].description,
-            humidity: data.list[0].main.humidity,
-            wind: data.list[0].wind.speed,
-            pressure: data.list[0].main.pressure
-        }
+                highTemp: element.main.temp_max,
+                lowTemp: element.main.temp_min,
+                cloudIcon: element.weather[0].icon,
+                cloudDescription: element.weather[0].description,
+                humidity: element.main.humidity,
+                wind: element.wind.speed,
+                pressure: element.main.pressure
+            };
 
+            console.log(forecast);
+            return forecast
+        });
         console.log(forecast)
+
+
+
+
 
 
 
