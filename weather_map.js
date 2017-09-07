@@ -6,7 +6,7 @@
         cnt: "3"
     }).done(function(data){
         console.log(data);
-        var forecast = data.list.forEach(function(element, index){
+        data.list.forEach(function(element, index){
             var forecast = {
 
                 highTemp: element.main.temp_max,
@@ -17,12 +17,12 @@
                 wind: element.wind.speed,
                 pressure: element.main.pressure
             };
+            console.log($(".forecast-box")[index]);
+            var forecastBox = $(".forecast-box")[index];
+            console.log($(forecastBox).html());
+            $(forecastBox).html("<li>" + forecast.highTemp +"/"+forecast.lowTemp+ "</li><li>" +  + "</li>")
 
-            console.log(forecast);
-
-            console.log($("li")[index])
         });
-        console.log(forecast)
 
 
 
