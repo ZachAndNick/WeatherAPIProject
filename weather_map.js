@@ -42,9 +42,10 @@
         console.log(options.lat);
         console.log(options.lon);
         $.get("http://api.openweathermap.org/data/2.5/forecast/", options).done(function(data){
-            console.log();
+
             var cityName = data.city.name;
             $("#city").html(cityName);
+            console.log(cityName);
 
             data.list.forEach(function(element, index){
                 var forecast = {
