@@ -21,7 +21,7 @@
             console.log($(".forecast-box")[index]);
             var forecastBox = $(".forecast-box")[index];
             console.log($(forecastBox).html());
-            $(forecastBox).html("<li>" + forecast.highTemp +"/"+forecast.lowTemp+ "</li><li><img src='" + weatherIcon + "'></li><li>Clouds: " + forecast.cloudDescription +"</li><li>Humidity: "+ forecast.humidity +"</li><li>Wind: " + forecast.wind + "</li><li>Pressure: " +forecast.pressure+ "</li>")
+            $(forecastBox).html("<li>" + forecast.highTemp +"&deg/"+forecast.lowTemp+ "&deg</li><li><img src='" + weatherIcon + "'></li><li>Clouds: " + forecast.cloudDescription +"</li><li>Humidity: "+ forecast.humidity +"</li><li>Wind: " + forecast.wind + "</li><li>Pressure: " +forecast.pressure+ "</li>")
 
         });
 
