@@ -17,10 +17,11 @@
                 wind: element.wind.speed,
                 pressure: element.main.pressure
             };
+            var weatherIcon = "http://openweathermap.org/img/w/"+forecast.cloudIcon+".png"
             console.log($(".forecast-box")[index]);
             var forecastBox = $(".forecast-box")[index];
             console.log($(forecastBox).html());
-            $(forecastBox).html("<li>" + forecast.highTemp +"/"+forecast.lowTemp+ "</li><li>" +  + "</li>")
+            $(forecastBox).html("<li>" + forecast.highTemp +"/"+forecast.lowTemp+ "</li><li><img src='" + weatherIcon + "'></li><li>Clouds: " + forecast.cloudDescription +"</li><li>Humidity: "+ forecast.humidity +"</li><li>Wind: " + forecast.wind + "</li><li>Pressure: " +forecast.pressure+ "</li>")
 
         });
 
