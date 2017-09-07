@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather Map</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="weather_map.css">
@@ -9,28 +10,22 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div class=" bg-primary">
-        <div>
+    <div class="">
+        <div class="row bg-primary">
+            <div class="col">
             <h1>Weather Application</h1>
             <h2>San Antonio</h2>
+            </div>
         </div>
-        <ul class="row">
-            <li class="col  boxSize">
-                <ul class=" bg-light forecast-box">
-
-                </ul>
-            </li>
-            <li class="col  boxSize">
-                <ul class="bg-light forecast-box">
-
-                </ul>
-            </li>
-            <li class="col  boxSize">
-                <ul class="bg-light forecast-box">
-
-                </ul>
-            </li>
+        <div class="row bg-light text-center">
+        <ul class="col  forecast-box">
         </ul>
+        <ul class="col forecast-box">
+        </ul>
+        <ul class="col forecast-box">
+        </ul>
+        </div>
+
     </div>
     <div class="map">
 
